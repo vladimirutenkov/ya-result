@@ -1,0 +1,10 @@
+---
+env:
+  mocha: true
+
+rules:
+  # Best Practices
+  no-unused-expressions: 0 # To make possible chai assertions
+
+  # Stylistic Issues
+  max-statements: 0

@@ -1,0 +1,28 @@
+{
+  "name": "ya-result",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --opts mocha.opts",
+    "build": "babel src --out-dir lib --source-maps",
+    "prebuild": "npm run clean -s",
+    "check": "npm run lint -s && npm test -s",
+    "lint": "eslint *.js src/** test/**",
+    "fix": "npm run lint -s -- --fix",
+    "clean": "rimraf lib",
+    "prepublish": "npm run check -s && npm run build -s"
+  },
+  "keywords": [],
+  "author": "Vladimir Utenkov",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-eslint": "^6.0.2",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.7.0",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2"
+  }
+}
